@@ -1,0 +1,117 @@
+.about {
+  padding: 100px 10%;
+  background: linear-gradient(180deg, #ffffff 0%, #f8fafc 100%);
+}
+
+.about-container {
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* Title */
+.about-content h2 {
+  text-align: center;
+  font-size: 2.8rem;
+  font-weight: 700;
+  margin-bottom: 25px;
+  color: #0f172a;
+  letter-spacing: -0.5px;
+}
+
+/* Paragraph */
+.about-content p {
+  text-align: center;
+  color: #64748b;
+  line-height: 1.9;
+  max-width: 850px;
+  margin: 0 auto 18px;
+  font-size: 1.05rem;
+}
+
+/* Features Grid */
+.about-features {
+  margin-top: 60px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+/* Cards */
+.about-card {
+  background: #ffffff;
+  padding: 35px 25px;
+  text-align: center;
+  border-radius: 18px;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.06);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Soft glow effect */
+.about-card::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(37,99,235,0.08), transparent 60%);
+  transform: rotate(25deg);
+  opacity: 0;
+  transition: 0.4s;
+}
+
+.about-card:hover::before {
+  opacity: 1;
+}
+
+/* Hover effect */
+.about-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
+}
+
+/* Numbers */
+.about-card h3 {
+  font-size: 2.3rem;
+  color: #2563eb;
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+
+/* Label */
+.about-card p {
+  margin: 0;
+  color: #475569;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+/* Tablet */
+@media (max-width: 992px) {
+  .about-features {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .about {
+    padding: 70px 6%;
+  }
+
+  .about-features {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .about-content h2 {
+    font-size: 2.2rem;
+  }
+
+  .about-content p {
+    font-size: 1rem;
+  }
+}
